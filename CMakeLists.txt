@@ -22,6 +22,11 @@ include_directories(include)
 
 export(TARGETS utilitize NAMESPACE utilitize:: FILE utilitizeTargets.cmake)
 
+install(FILES ${HEADER} DESTINATION include)
+
+install(DIRECTORY include/
+        DESTINATION include/)
+        
 install(TARGETS utilitize
     EXPORT utilitizeTargets
     LIBRARY DESTINATION lib
